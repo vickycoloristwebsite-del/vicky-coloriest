@@ -30,7 +30,7 @@ export default function Header() {
         {/* Navigation Links - Left Aligned */}
         <nav className="flex items-center pointer-events-auto max-[932px]:hidden">
           <div>
-            <Link
+            {/* <Link
               href="/"
               className={`text-[14px] leading-[19px] uppercase tracking-[0.05em] transition-colors duration-200 ${
                 isComparisonActive
@@ -39,16 +39,15 @@ export default function Header() {
               }`}
             >
               Comparison
-            </Link>
+            </Link> */}
           </div>
           <div className="pl-[20px]">
             <Link
               href="/projects"
-              className={`text-[14px] leading-[19px] uppercase tracking-[0.05em] transition-colors duration-200 ${
-                isProjectsActive
-                  ? "text-white font-normal"
-                  : "text-[#D1D5D7] hover:text-white font-normal"
-              }`}
+              className={`text-[14px] leading-[19px] uppercase tracking-[0.05em] transition-colors duration-200 ${isProjectsActive
+                ? "text-white font-normal"
+                : "text-[#D1D5D7] hover:text-white font-normal"
+                }`}
             >
               Projects
             </Link>
@@ -56,13 +55,12 @@ export default function Header() {
           <div className="pl-[20px]">
             <Link
               href="/contact"
-              className={`text-[14px] leading-[16px] uppercase tracking-[0.05em] transition-colors duration-200 ${
-                isContactsActive
-                  ? "text-white font-normal"
-                  : "text-[#D1D5D7] hover:text-white font-normal"
-              }`}
+              className={`text-[14px] leading-[16px] uppercase tracking-[0.05em] transition-colors duration-200 ${isContactsActive
+                ? "text-white font-normal"
+                : "text-[#D1D5D7] hover:text-white font-normal"
+                }`}
             >
-              Contacts
+              Contact
             </Link>
           </div>
         </nav>
@@ -92,11 +90,10 @@ export default function Header() {
 
       {/* Mobile Responsive Navigation Overlay */}
       <div
-        className={`fixed inset-0 bg-[#111111] z-[99999] flex flex-col justify-center items-center px-[5%] transition-all duration-300 ${
-          mobileMenuOpen
-            ? "opacity-100 visible pointer-events-auto"
-            : "opacity-0 invisible pointer-events-none"
-        }`}
+        className={`fixed inset-0 bg-[#111111] z-[99999] flex flex-col justify-center items-center px-[5%] transition-all duration-300 ${mobileMenuOpen
+          ? "opacity-100 visible pointer-events-auto"
+          : "opacity-0 invisible pointer-events-none"
+          }`}
       >
         {/* Close Button */}
         <div
@@ -115,9 +112,8 @@ export default function Header() {
           <div>
             <Link
               href="/"
-              className={`text-[22px] leading-[32px] uppercase tracking-wider transition-colors duration-200 ${
-                isComparisonActive ? "text-white" : "text-[#D1D5D7] hover:text-white"
-              }`}
+              className={`text-[22px] leading-[32px] uppercase tracking-wider transition-colors duration-200 ${isComparisonActive ? "text-white" : "text-[#D1D5D7] hover:text-white"
+                }`}
             >
               Comparison
             </Link>
@@ -125,9 +121,8 @@ export default function Header() {
           <div>
             <Link
               href="/projects"
-              className={`text-[22px] leading-[32px] uppercase tracking-wider transition-colors duration-200 ${
-                isProjectsActive ? "text-white" : "text-[#D1D5D7] hover:text-white"
-              }`}
+              className={`text-[22px] leading-[32px] uppercase tracking-wider transition-colors duration-200 ${isProjectsActive ? "text-white" : "text-[#D1D5D7] hover:text-white"
+                }`}
             >
               Projects
             </Link>
@@ -135,9 +130,8 @@ export default function Header() {
           <div>
             <Link
               href="/contact"
-              className={`text-[22px] leading-[32px] uppercase tracking-wider transition-colors duration-200 ${
-                isContactsActive ? "text-white" : "text-[#D1D5D7] hover:text-white"
-              }`}
+              className={`text-[22px] leading-[32px] uppercase tracking-wider transition-colors duration-200 ${isContactsActive ? "text-white" : "text-[#D1D5D7] hover:text-white"
+                }`}
             >
               Contacts
             </Link>
