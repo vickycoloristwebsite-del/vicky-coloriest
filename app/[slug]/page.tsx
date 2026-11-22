@@ -23,7 +23,7 @@ export async function generateMetadata({
 
   return {
     title: `${project.title} - VIKRAM KUMPATI`,
-    description: project.description || `Project ${project.title} by Tyler Markovich`,
+    description: project.description || `Project ${project.title} by VIKRAM KUMPATI`,
   };
 }
 

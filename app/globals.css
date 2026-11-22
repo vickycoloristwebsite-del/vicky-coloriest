@@ -9,7 +9,8 @@
   --foreground: #D1D5D7;
 }
 
-html, body {
+html,
+body {
   background-color: #111111;
   color: #D1D5D7;
   font-family: var(--font-montserrat), -apple-system, BlinkMacSystemFont, sans-serif;
@@ -23,8 +24,7 @@ html, body {
 .project-cover-aspect {
   position: relative;
   width: 100%;
-  padding-bottom: 41.77%; /* 1920x802 aspect ratio of Tyler Markovich covers */
-  overflow: hidden;
+  padding-bottom: 41.77%;
   background-color: #181818;
 }
 

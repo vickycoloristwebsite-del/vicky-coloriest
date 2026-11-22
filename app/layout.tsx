@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Tyler Markovich",
+  title: "VIKRAM KUMPATI",
   description: "Director of Photography and Colorist Portfolio",
 };
 

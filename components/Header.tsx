@@ -13,9 +13,16 @@ export default function Header() {
     setMobileMenuOpen(false);
   }, [pathname]);
 
-  const isDpActive = pathname === "/" || pathname === "/dp";
-  const isColorActive = pathname === "/color";
-  const isContactActive = pathname === "/contact";
+  const isComparisonActive =
+    pathname === "/" ||
+    pathname === "/comparison" ||
+    pathname.startsWith("/comparison");
+  const isProjectsActive =
+    pathname === "/projects" || pathname.startsWith("/projects");
+  const isContactsActive =
+    pathname === "/contact" ||
+    pathname === "/contacts" ||
+    pathname.startsWith("/contact");
 
   return (
     <>
@@ -24,43 +31,46 @@ export default function Header() {
         <nav className="flex items-center pointer-events-auto max-[932px]:hidden">
           <div>
             <Link
-              href="/dp"
-              className={`text-[14px] leading-[19px] uppercase tracking-[0.05em] transition-colors duration-200 ${isDpActive
-                ? "text-white font-normal"
-                : "text-[#D1D5D7] hover:text-white font-normal"
-                }`}
+              href="/"
+              className={`text-[14px] leading-[19px] uppercase tracking-[0.05em] transition-colors duration-200 ${
+                isComparisonActive
+                  ? "text-white font-normal"
+                  : "text-[#D1D5D7] hover:text-white font-normal"
+              }`}
             >
-              DP
+              Comparison
             </Link>
           </div>
           <div className="pl-[20px]">
             <Link
-              href="/color"
-              className={`text-[14px] leading-[19px] uppercase tracking-[0.05em] transition-colors duration-200 ${isColorActive
-                ? "text-white font-normal"
-                : "text-[#D1D5D7] hover:text-white font-normal"
-                }`}
+              href="/projects"
+              className={`text-[14px] leading-[19px] uppercase tracking-[0.05em] transition-colors duration-200 ${
+                isProjectsActive
+                  ? "text-white font-normal"
+                  : "text-[#D1D5D7] hover:text-white font-normal"
+              }`}
             >
-              Color
+              Projects
             </Link>
           </div>
           <div className="pl-[20px]">
             <Link
               href="/contact"
-              className={`text-[14px] leading-[16px] uppercase tracking-[0.05em] transition-colors duration-200 ${isContactActive
-                ? "text-white font-normal"
-                : "text-[#D1D5D7] hover:text-white font-normal"
-                }`}
+              className={`text-[14px] leading-[16px] uppercase tracking-[0.05em] transition-colors duration-200 ${
+                isContactsActive
+                  ? "text-white font-normal"
+                  : "text-[#D1D5D7] hover:text-white font-normal"
+              }`}
             >
-              Contact
+              Contacts
             </Link>
           </div>
         </nav>
 
-        {/* Center Title / Logo */}
+        {/* Center Title / Logo -> links to Home Page */}
         <div className="flex-1 text-center pointer-events-auto max-[932px]:text-center">
           <div className="inline-block text-[#D1D5D7] hover:text-white text-[42px] font-extralight tracking-[0.38em] uppercase leading-[53px] transition-colors duration-200 max-[932px]:text-[24px] max-[932px]:leading-[25px] max-[932px]:tracking-[0.25em] max-[540px]:text-[18px] max-[540px]:tracking-[0.2em] -mr-[0.38em]">
-            <Link href="/dp">
+            <Link href="/">
               VIKRAM KUMPATI
             </Link>
           </div>
@@ -82,10 +92,11 @@ export default function Header() {
 
       {/* Mobile Responsive Navigation Overlay */}
       <div
-        className={`fixed inset-0 bg-[#111111] z-[99999] flex flex-col justify-center items-center px-[5%] transition-all duration-300 ${mobileMenuOpen
-          ? "opacity-100 visible pointer-events-auto"
-          : "opacity-0 invisible pointer-events-none"
-          }`}
+        className={`fixed inset-0 bg-[#111111] z-[99999] flex flex-col justify-center items-center px-[5%] transition-all duration-300 ${
+          mobileMenuOpen
+            ? "opacity-100 visible pointer-events-auto"
+            : "opacity-0 invisible pointer-events-none"
+        }`}
       >
         {/* Close Button */}
         <div
@@ -103,29 +114,32 @@ export default function Header() {
         <nav className="w-full text-center flex flex-col space-y-[30px]">
           <div>
             <Link
-              href="/dp"
-              className={`text-[22px] leading-[32px] uppercase tracking-wider transition-colors duration-200 ${isDpActive ? "text-white" : "text-[#D1D5D7] hover:text-white"
-                }`}
+              href="/"
+              className={`text-[22px] leading-[32px] uppercase tracking-wider transition-colors duration-200 ${
+                isComparisonActive ? "text-white" : "text-[#D1D5D7] hover:text-white"
+              }`}
             >
-              DP
+              Comparison
             </Link>
           </div>
           <div>
             <Link
-              href="/color"
-              className={`text-[22px] leading-[32px] uppercase tracking-wider transition-colors duration-200 ${isColorActive ? "text-white" : "text-[#D1D5D7] hover:text-white"
-                }`}
+              href="/projects"
+              className={`text-[22px] leading-[32px] uppercase tracking-wider transition-colors duration-200 ${
+                isProjectsActive ? "text-white" : "text-[#D1D5D7] hover:text-white"
+              }`}
             >
-              Color
+              Projects
             </Link>
           </div>
           <div>
             <Link
               href="/contact"
-              className={`text-[22px] leading-[32px] uppercase tracking-wider transition-colors duration-200 ${isContactActive ? "text-white" : "text-[#D1D5D7] hover:text-white"
-                }`}
+              className={`text-[22px] leading-[32px] uppercase tracking-wider transition-colors duration-200 ${
+                isContactsActive ? "text-white" : "text-[#D1D5D7] hover:text-white"
+              }`}
             >
-              Contact
+              Contacts
             </Link>
           </div>
         </nav>
